@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+</head>
+<body>
+
+<h1>All Users</h1>
+
+{% for user in users %}
+
+<hr>
+
+<p><strong>ID:</strong> {{ user.id }}</p>
+<p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+<p><strong>Age:</strong> {{ user.age }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Phone:</strong> {{ user.phone }}</p>
+
+{% endfor %}
+
+</body>
+</html>
