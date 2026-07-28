@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def all_users(request):
 
-    response = requests.get("http://flask-docker:8080/users")
+    response = requests.get("https://backend-9iqu.vercel.app/users")
 
     data = response.json()
 
@@ -15,9 +15,11 @@ def all_users(request):
     return render(request, "home.html", context)
 
 
-def user_detail(request, id):
+def user_detail(request, user_id):
 
-    response = requests.get(f"http://flask-docker:8080/users/{id}")
+    response = requests.get(
+    f"https://backend-9iqu.vercel.app/users/{user_id}"
+)
     data = response.json()
 
     context = {

@@ -21,5 +21,5 @@ from frontend.views import all_users, user_detail
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("users/", all_users),
-    path("users/<int:id>/", user_detail),
+    path("users/<int:user_id>/", user_detail),
 ]
