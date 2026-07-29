@@ -16,7 +16,7 @@ def all_users(request):
 
 
 def user_detail(request, user_id):
-    response = requests.get(settings.BACKEND_URL + "/users")
+    response = requests.get(f"{settings.BACKEND_URL}/users/{user_id}")
 
     data = response.json()
 
