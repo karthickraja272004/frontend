@@ -1,10 +1,10 @@
 import requests
-from django.shortcuts import render 
+from django.conf import settings
 
 
 def all_users(request):
 
-    response = requests.get("https://backend-9iqu.vercel.app/users")
+   response = requests.get(settings.BACKEND_URL + "/users")
 
     data = response.json()
 
@@ -17,9 +17,7 @@ def all_users(request):
 
 def user_detail(request, user_id):
 
-    response = requests.get(
-    f"https://backend-9iqu.vercel.app/users/{user_id}"
-)
+    response = requests.get(settings.BACKEND_URL + "/users")
     data = response.json()
 
     context = {
