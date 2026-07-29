@@ -1,10 +1,10 @@
 import requests
 from django.conf import settings
+from django.shortcuts import render
 
 
 def all_users(request):
-
-   response = requests.get(settings.BACKEND_URL + "/users")
+    response = requests.get(settings.BACKEND_URL + "/users")
 
     data = response.json()
 
@@ -16,8 +16,8 @@ def all_users(request):
 
 
 def user_detail(request, user_id):
-
     response = requests.get(settings.BACKEND_URL + "/users")
+
     data = response.json()
 
     context = {
